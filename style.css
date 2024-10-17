@@ -12,13 +12,13 @@ body{
 .container {
     display: block;
     background-color: white;
-    width: 80%;
-    height: 80%;
-    border-radius: 30px;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
     border: solid 3px #586B6A;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;    
+    margin-top: 15px;    
 }
  
 
@@ -31,15 +31,15 @@ body{
     color: #006b64;
 }
 .btn{
-    width: 200px;
-    height: 40px;
-    border: solid 2px #586B6A;
+    width: 150px;
+    height: 30px;
+    border: solid 1px #586B6A;
     background: #006b64;
     font-size: 14px;
     font-weight: bolder;
     font-family: "iCielParisSerif-Bold";
  src: url('iCielParisSerif-Bold.ttf');
-    margin: 3px;
+    margin: 4px;
     
 
 }
