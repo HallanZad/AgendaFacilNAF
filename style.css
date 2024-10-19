@@ -3,7 +3,7 @@ body{
     background-image: linear-gradient(TO BOTTOM,#006B64,#586B6A);
     background-attachment: fixed;
     font-family: "Helvetica";
-    src: url('FONTES/Helvetica.ttf');
+    src: url('FONTES/Helvetica Rounded Bold.ttf');
 }
 .container {
     display: block;
