@@ -4,11 +4,7 @@ body{
     background-attachment: fixed;
     font-family: "Helvetica";
     src: url('FONTES/Helvetica/Helvetica.ttf');
-    
-
 }
-
-
 .container {
     display: block;
     background-color: white;
@@ -20,9 +16,7 @@ body{
     margin-right: auto;
     margin-top: 15px;    
 }
- 
-
-.divbtn {
+ .divbtn {
     margin: 0.3em;
 }
 
@@ -40,8 +34,6 @@ body{
     font-family: "iCielParisSerif-Bold";
  src: url('FONTES/iCiel-fonts/iCielParisSerif-Bold.ttf');
     margin: 4px;
-    
-
 }
 .bt1 {
     background-color: #006b64;
@@ -63,7 +55,6 @@ body{
     color:white;
     border-radius: 20px;
 }
-
 .login {
     display: block;
     background-color: whitesmoke;
