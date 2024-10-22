@@ -1,12 +1,48 @@
 <html lang="pt-br">
 <head>
+    <script src="avaliacoes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgendaFacilNFA</title>
     <link rel="icon" type="image/png" href="IMAGENS/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
+<div class="container">
+    <h1>DEIXE SUA AVALIAÇÃO</h1>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+  
+      <label for="avaliacao">Avaliação:</label>
+      <select id="avaliacao" name="avaliacao" required>
+        <option value="1">1 estrela</option>
+        </select>
+  
+      <label for="comentario">Comentários:</label>
+      <textarea id="comentario" name="comentario"></textarea>
+  
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 <body>
+    <div class="container">
+    </div>
+
+  <script>
+  const container = document.querySelector('.container');
+
+  const form = document.createElement('form');
+
+  form.appendChild(/* ... */);
+
+  container.appendChild(form);
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+  });
+  </script>
+</body>
     <div class="container">
         <h1><center>DEIXE SUA AVALIAÇÃO</center></h1>
          <center>
