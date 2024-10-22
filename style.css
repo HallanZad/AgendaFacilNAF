@@ -85,3 +85,19 @@ body{
     margin-left: 1%;
    
 }
+
+.agendamento {
+    display: block;
+    background-color: whitesmoke;
+    width: 60%;
+    height: 60%;
+    border-radius: 30px;
+    border: solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre {
+    margin-left: 5%;
+    margin-right: 5%;
+}
