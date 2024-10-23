@@ -4,6 +4,8 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    font-family: "Helvetica";
+    src: url('FONTES/Helvetica Rounded Bold.ttf');
 }
 .container {
     display: block;
@@ -89,8 +91,8 @@ body{
 .agendamento {
     display: block;
     background-color: whitesmoke;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     border-radius: 30px;
     border: solid 1px;
     margin-left: auto;
