@@ -1,15 +1,16 @@
 body{
     font-family:  Helvetica, sans-serif;
-    background-image: linear-gradient(TO BOTTOM,#006B64,#586B6A);
-    background-attachment: fixed;
+    background-image: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif);
+    background-size: 100%;
+  
     font-family: "Helvetica";
     src: url('FONTES/Helvetica Rounded Bold.ttf');
 }
 .container {
     display: block;
     background-color: white;
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     border-radius: 20px;
     border: solid 3px #586B6A;
     margin-left: auto;
