@@ -1,11 +1,19 @@
 body{
     font-family:  Helvetica, sans-serif;
-    background: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif)no-repeat center top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    clear: both;  
+    background:url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif) center center fixed;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -khtml-background-size: cover;
+    -moz-background-size: cover;
+     min-height:100% !important;
     font-family: "Helvetica";
     src: url('FONTES/Helvetica Rounded Bold.ttf');
+}
+h1{
+    color: #586B6A;
+    font-family: 
 }
 .container {
     display: block;
