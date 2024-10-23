@@ -1,7 +1,7 @@
 body{
     font-family:  Helvetica, sans-serif;
     clear: both;  
-    background: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif) center center fixed;
+    background: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif) right center fixed;
     background-size:cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -70,8 +70,8 @@ h1{
 .login {
     display: block;
     background-color: whitesmoke;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
     border-radius: 30px;
     border: solid 1px;
     margin-left: auto;
