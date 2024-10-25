@@ -5,20 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deixe Sua Avaliação</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+           
+        }
+        input, select, textarea {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+         }
+</style>
+    </head>
     <div class="container">   
         <h1><center>DEIXE SUA AVALIAÇÃO</center></h1>
          <center>  
-             <nav> 
              <div class="divbtn">
-                 <a href="index.html"><button class="btn bt1">Início</button></a>
-                 <a href="Agendamento.html"><button class="btn bt2">Agendamento</button></a>
-                 <a href="Perfil.html"><button class="btn bt3">Usuário</button></a>
-                 <a href="Avaliação.html"><button class="btn bt4">Deixe Sua Avaliação</button></a>
+                 <a href="index.html"><button class="btn">Início</button></a>
+                 <a href="Agendamento.html"><button class="btn">Agendamento</button></a>
+                 <a href="Login.html"><button class="btn">Usuário</button></a>
+                 <a href="Avaliação.html"><button class="btn">Deixe Sua Avaliação</button></a>
              </div>
             <br>
-            <div class="Avaliação">
-                <H2>Nos avalie aqui</H2>
-                
+            <div class="container2">
+                <H2>A sua avaliação é muito importante para nos!</H2>
+                <form class="avaliacao" action="avaliação-recebida.html">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                    <label for="Name">Email:</label>
+                    <input type="email" id="Email" placeholder="exemplo@unifesonaf.com" required="">
+                    <label for="Name">Conte como foi sua experiência</label>
+                    <textarea id="feedback" placeholder="Deixe aqui sua avaliação..." required=""></textarea>
+                    <button class="btn" type="submit">Enviar</button>
+                </form>
+            
 <br>
             </div>
             <br><br>

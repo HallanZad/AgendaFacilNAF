@@ -11,82 +11,38 @@ body{
     font-family: "Helvetica";
     src: url('FONTES/Helvetica Rounded Bold.ttf');
 }
-
-h1{
-    color: #586B6A;
-
-}
-
 .container {
     display: block;
-    background-color: white;
+    background-color:rgba(255, 250, 250, 0.812);
     width: 90%;
     height: 90%;
     border-radius: 20px;
     border: solid 3px #586B6A;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;    
+    margin-top: 30px;    
 }
- .divbtn {
+.divbtn {
     margin: 0.3em;
 }
-
 .btn:hover{
     background: white;
-    color: #006b64;
+    color: #006b64
 }
 .btn{
-    width: 150px;
-    height: 30px;
-    border: solid 1px #586B6A;
-    background: #006b64;
-    font-size: 14px;
-    font-weight: bolder;
-    font-family: "iCielParisSerif-Bold";
-    src: url('FONTES/iCielParisSerif-Bold.ttf');
-    margin: 4px;
-}
-.bt1 {
-    background-color: #006b64;
-    color:white;
-    border-radius: 20px;
-}
-.bt2 {
-    background-color: #006b64;
-    color:white;
-    border-radius: 20px;
-}
-.bt3 {
-    background-color: #006b64;
-    color:white;
-    border-radius: 20px;
-}
-.bt4 {
-    background-color: #006b64;
-    color:white;
-    border-radius: 20px;
-}
-.login {
-    display: block;
-    background-color: whitesmoke;
-    width: 60%;
-    height: 60%;
-    border-radius: 30px;
-    border: solid 1px;
-    margin-left: auto;
-    margin-right: auto;   
-}
-.bt5 {
-    background-color: #006b64;
-    color:white;
-    border-radius: 5px;
-    border: none;
     width: 180px;
     height: 30px;
+    border: solid 2px #586B6A;
+    background: #006b64;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 5px;
+    color:white;
+    border-radius: 10px;
 }
-
-.bt6 {
+.bt6 
+{
     background-color: #006b64;
     color:white;
     border-radius: 5px;
@@ -98,42 +54,43 @@ h1{
    
 }
 
-.agendamento {
+.container2 {
     display: block;
     background-color: whitesmoke;
     width: 80%;
     height: 80%;
+    size-adjust: fixed;
     border-radius: 30px;
     border: solid 1px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.sobre {
+.inicio {
     margin-left: 5%;
     margin-right: 5%;
 }
-
-.Avaliação {
-    display: block;
-    background-color: whitesmoke;
-    width: 60%;
-    height: 60%;
-    border-radius: 30px;
-    border: solid 1px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 @media (max-width:768px) {
     body {
      background-image: url(IMAGENS/portrait-attractive-trendy-cheerful-girl-600nw-2161154411.webp); 
     }
 }
 
-
 @media (min-width:769px) {
    body {
      background-image: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif); 
    }
+}
+.inputlogin{
+        padding: 1%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+}
+.emailpng{
+        width: 25%;
+        height: 25%;
+
+}
+.bt2{
+    font-size: 12px
 }
