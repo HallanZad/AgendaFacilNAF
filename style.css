@@ -124,3 +124,16 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width:768px) {
+    body {
+     background-image: url(IMAGENS/portrait-attractive-trendy-cheerful-girl-600nw-2161154411.webp); 
+    }
+}
+
+
+@media (min-width:769px) {
+   body {
+     background-image: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif); 
+   }
+}
