@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="icon" type="image/png" href="IMAGENS/favicon.png">
+        <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+         }
+</style>
+    <link rel="stylesheet" href="style.css">
+    <script src="JS/Index.js" type="text/javascript"></script>
+    <script src="JS/Validação.js" type="text/javascript"></script>
+</head>
+<body>  
+    
+    <div class="site-header">
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <div class="menu" id="menu">
+                <a href="index.html" class="button">Inicio</a>
+                <a href="Login Cliente.html" class="button">Sou Cliente</a>
+                <a href="Login Colaborador.html" class="button">Sou Colaborador</a>
+            </div>
+        <strong>Cadastro</strong>
+    </div>
+    <center> 
+        <div class="container">              
+            <H2>Bem-Vindo Cliente!</H2>
+            <h3>Cadastre-se abaixo.</h3> 
+            <form action="Confirmação de Cadastro.html">
+               <label for="nome">Nome Completo:</label>
+               <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required  oninput="nameValidate()">
+               <label for="nome">CPF:</label>
+               <input type="text" id="nome" name="nome" placeholder="Digite seu CPF" required>
+               <label for="data">Data de Nascimento:</label>
+               <input type="date" id="data" name="data" required>
+               <label for="email">E-mail:</label>
+               <input type="email" id="email" name="email" placeholder="exemplo@unifesonaf.com" required>
+               <label for="nome">Senha:</label>
+               <input type="text" id="nome" name="nome" placeholder="Digite uma Senha" required>
+               <label for="nome">Confirmação de Senha:</label>
+               <input type="text" id="nome" name="nome" placeholder="Repita a Senha" required>
+               <button class="btn" type="submit">Cadastra-se</button>
+           </form><br><br>
+        </div>
+             <br><br>
+        </div>
+    </center>
+</div>
+<div class="site-footer">
+    Copyright © 2024.
+</div>
+</body>
+</html>

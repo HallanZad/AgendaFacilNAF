@@ -1,7 +1,7 @@
 body{
     font-family:  Helvetica, sans-serif;
     clear: both;  
-    background: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif) right center fixed;
+    background: url(IMAGENS\homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif) right center fixed;
     background-size:cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -10,6 +10,10 @@ body{
      min-height:100% !important;
     font-family: "Helvetica";
     src: url('FONTES/Helvetica Rounded Bold.ttf');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
 }
 .container {
     display: block;
@@ -40,6 +44,7 @@ body{
     margin: 5px;
     color:white;
     border-radius: 10px;
+    
 }
 .bt6 
 {
@@ -94,3 +99,170 @@ body{
 .bt2{
     font-size: 12px
 }
+.site-header {
+    background-color: #006b64;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 0px 0px 10px 10px;
+}
+.site-content {
+    padding: 20px;
+}
+.site-footer {
+    background-color: #006b64;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+}
+.button {
+    display: block;
+    width: auto;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #006b64;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: white;
+}
+.menu-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #006b64;
+    color: white;
+    border: 1px solid white;
+    padding: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15pt;
+    width: 100px;
+    height: 30px;
+    
+}
+.menu-button:hover {
+    background-color: white;
+    color:#006b64;
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 1px;
+    background-color: #006b64;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 15pt;
+}
+.menu a {
+    display: block;
+    padding: 05px;
+    text-decoration: none;
+ 
+}
+.menu a:hover {
+    background: white;
+    color: #006b64
+}
+.chatbot-button {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #006b64;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+.chatbot-button:hover{
+    background-color: white;
+    color: #006b64;
+    border: 1px solid #586B6A;
+}
+.chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    flex-direction: column;
+}
+.chat-header {
+    background-color: #006b64;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.chat-content {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.chat-message {
+    margin-bottom: 20%;
+}
+.options-container {
+    margin-top: 10px;
+}
+.option-button {
+    display: inline;
+    width: 49%;
+    padding: 10px;
+    background-color: #006b64;
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.option-button:hover {
+    background-color: white;
+    color: #006b64;
+}
+.chat-message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #e0e0e0;
+    max-width: 80%;
+    word-wrap: break-word;
+}.chat-message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #e0e0e0;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+.chat-message::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #e0e0e0;
+    border-bottom: 0;
+    margin-left: -5px;
+    margin-bottom: -10px;}

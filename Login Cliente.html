@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="icon" type="image/png" href="IMAGENS/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="JS/Index.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="site-header">
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="menu" id="menu">
+            <a href="index.html" class="button">Inicio</a>
+            <a href="Login Cliente.html" class="button">Sou Cliente</a>
+            <a href="Login Colaborador.html" class="button">Sou Colaborador</a>
+       </div>
+        <strong>Login</strong>
+    </div>
+     <div class="container">    
+            <h1><center>Bem-Vindo Cliente!</center></h1>
+            <center>
+                    <br>
+                    <div class="container2">
+                       <h2>Faça seu Login.</h2>
+                       <form action="Perfil do Cliente.html">
+                           <input class="inputlogin" type="email" placeholder="Email" required>
+                           <br> <br>
+                           <input class="inputlogin" type="password" placeholder="Senha" required>
+                           <br><br>
+                           <button class="btn bt5" type="submit">Entrar</button></a>
+                           <br>
+                           <a href="Redefinição.html">Esqueci a senha</a></form>
+                           <a href="Cadastro Cliente.html">Cadastre-se</a></form>
+                           <br><br>
+                    </div>
+                    <br><br>
+           </center>
+           <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
+    
+     <div class="chatbot-container" id="chatbot">
+         <div class="chat-header">
+             Chatbot
+         </div>
+         <div class="chat-content" id="chat-content">
+             <div class="chat-message" id="welcome-message">Bem-vindo! <p>Como posso ajudar você hoje?</p></div>
+             <div class="options-container">
+                 <button class="option-button" onclick="sendMessage('Quais são seus serviços?')">Serviços</button>
+                 <button class="option-button" onclick="sendMessage('Qual seu horário de funcionamento?')">Horário</button>
+                 <button class="option-button" onclick="sendMessage('Preciso de ajuda.')">Agendamento</button>
+                 <button class="option-button" onclick="sendMessage('Quais são seus serviços?')">Serviços</button>
+                 <button class="option-button" onclick="sendMessage('Qual seu horário de funcionamento?')">Horário</button>
+                 <button class="option-button" onclick="sendMessage('Preciso de ajuda.')">Ajuda</button>
+                </div>
+            </div>
+         </div>
+       </div>
+
+     </div>
+          </div>
+          <div class="site-footer">
+            Copyright © 2024.
+        </div>
+       </body>
+       </html>
+       

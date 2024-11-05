@@ -1,28 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgendaFacilNFA</title>
     <link rel="icon" type="image/png" href="IMAGENS/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="JS/Index.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class="container">
-        <h1><center>AGENDAFACÍL NAF</center></h1>
-         <center>
-                     <div class="divbtn">
-                         <a href="index.html"><button class="btn">Início</button></a>
-                         <a href="Agendamento.html"><button class="btn">Agendamento</button></a>
-                         <a href="Login.html"><button class="btn">Usuário</button></a>
-                         <a href="Avaliação.html"><button class="btn">Deixe Sua Avaliação</button></a>
-             <div class="inicio">       
-           <H2>Núcleo de Apoio Contabil e Fiscal.</H2>
-           <p></p>Desde o seu lançamento em 2020, o NAF tem se destacado como uma referência na prestação de serviços contábeis e fiscais, e mais recentemente, em 2023, alcançou o status de estar entre os dez principais prestadores de serviços da 7ª região da Receita Federal, que engloba os estados do Rio de Janeiro e do Espírito Santo.</P>
-               <p>O NAF, é uma parceria com instituições de ensino superior, e no caso do Unifeso, envolve cursos de Administração, Ciências Contábeis e Direito. O NAF pessoas encaminhadas pela agência de Teresópolis da Receita Federal, e nossos serviços são altamente demandados, especialmente durante a temporada de declaração do Imposto de Renda.
-               </p></div>
+    <div class="site-header">
+            <button class="menu-button" onclick="toggleMenu()">Entrar</button>
+            <div class="menu" id="menu">
+                 <a href="Login Cliente.html" class="button">Sou Cliente</a>
+                 <a href="Login Colaborador.html" class="button">Sou Colaborador</a>
+            </div>
+              <strong>Agenda Facil NAF</strong> 
+    </div>
+        <center>
+        <div class="container">
+            <div class="site-content">
+                  <H2>Núcleo de Apoio Contabil e Fiscal.</H2>
+                    <p>
+                        Desde o seu lançamento em 2020, o NAF tem se destacado como uma referência na prestação de serviços contábeis e fiscais, 
+                        e mais recentemente, em 2023, alcançou o status de estar entre os dez principais prestadores de serviços da 7ª região 
+                        da Receita Federal, que engloba os estados do Rio de Janeiro e do Espírito Santo.
+                    </p>
+                    <p>
+                        O NAF, é uma parceria com instituições de ensino superior, e no caso do Unifeso, envolve cursos de Administração, 
+                        Ciências Contábeis e Direito. O NAF pessoas encaminhadas pela agência de Teresópolis da Receita Federal, e nossos 
+                        serviços são altamente demandados, especialmente durante a temporada de declaração do Imposto de Renda. 
+                    </p>
+            </div>
+            <div class="Unifeso_logomarca"></div>
                <img src="IMAGENS\Unifeso_logomarca.png" alt="some text" width=300 height=100>
-        </center> </div>
-   </div>   
+            </div></div>
+ 
+            </div>
+         
+        </center>
+    </div>
+    <div class="site-footer">
+        Copyright © 2024.
+    </div>
+     <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
+    
+     <div class="chatbot-container" id="chatbot">
+         <div class="chat-header">
+             Atendimento Virtual
+         </div>
+         <div class="chat-content" id="chat-content">
+             <div class="chat-message" id="welcome-message">Bem-vindo! <p>Como posso ajudar você hoje?</p></div>
+             <div class="options-container">
+                 <button class="option-button" onclick="sendMessage('Quais são seus serviços?')">Serviços</button>
+                 <button class="option-button" onclick="sendMessage('Qual seu horário de funcionamento?')">Horário</button>
+                 <button class="option-button" onclick="sendMessage('Como agendar?')">Agendamento</button>
+                 <button class="option-button" onclick="sendMessage('Como fazer o Login?')">Login</button>
+                 <button class="option-button" onclick="sendMessage('Como recuperar a minha senha?')">Esqueci a senha</button>
+                 <button class="option-button" onclick="sendMessage('Preciso de ajuda.')">Ajuda</button>
+                </div>
+            </div>
+         </div>
+       </div>
+
+     </div>
 </body>
 </html>
