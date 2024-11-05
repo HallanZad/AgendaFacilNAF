@@ -1,30 +1,20 @@
 body{
-    font-family:  Helvetica, sans-serif;
-    clear: both;  
-    background: url(IMAGENS\homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif) right center fixed;
-    background-size:cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -khtml-background-size: cover;
-    -moz-background-size: cover;
-     min-height:100% !important;
-    font-family: "Helvetica";
-    src: url('FONTES/Helvetica Rounded Bold.ttf');
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #a7e1dd;
 }
 .container {
     display: block;
-    background-color:rgba(255, 250, 250, 0.812);
+    background-color:rgba(255, 250, 250, 0.96);
     width: 90%;
     height: 90%;
-    border-radius: 20px;
-    border: solid 3px #586B6A;
+    border-radius: 5px;
+    border: outset 2px #1baaa3;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;    
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);    
 }
 .divbtn {
     margin: 0.3em;
@@ -65,8 +55,8 @@ body{
     width: 80%;
     height: 80%;
     size-adjust: fixed;
-    border-radius: 30px;
-    border: solid 1px;
+    border-radius: 10px;
+    border: solid 1px #006b64;
     margin-left: auto;
     margin-right: auto;
 }
@@ -74,17 +64,6 @@ body{
 .inicio {
     margin-left: 5%;
     margin-right: 5%;
-}
-@media (max-width:768px) {
-    body {
-     background-image: url(IMAGENS/portrait-attractive-trendy-cheerful-girl-600nw-2161154411.webp); 
-    }
-}
-
-@media (min-width:769px) {
-   body {
-     background-image: url(IMAGENS/homem-e-mulher-trabalhando-em-inovacoes-energeticas_23-2148820167.avif); 
-   }
 }
 .inputlogin{
         padding: 1%;
@@ -100,18 +79,19 @@ body{
     font-size: 12px
 }
 .site-header {
-    background-color: #006b64;
+    background-image: url(IMAGENS/header\ 2.jpg) ;
     color: white;
     text-align: center;
     padding: 15px;
     font-size: 24px;
     border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .site-content {
     padding: 20px;
 }
 .site-footer {
-    background-color: #006b64;
+    background-image: url(IMAGENS/header\ 2.jpg) ;
     color: white;
     text-align: center;
     padding: 10px;
@@ -119,6 +99,7 @@ body{
     width: 100%;
     bottom: 0;
     border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
 }
 .button {
     display: block;
@@ -136,11 +117,11 @@ body{
 }
 .menu-button {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 62px;
+    left: 20px;
     background-color: #006b64;
     color: white;
-    border: 1px solid white;
+    border: solid 2px #586b6a98;
     padding: auto;
     border-radius: 5px;
     cursor: pointer;
@@ -156,19 +137,18 @@ body{
 .menu {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 1px;
+    top: 93px;
+    left: 20px;
     background-color: #006b64;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     overflow: hidden;
     font-size: 15pt;
 }
 .menu a {
-    display: block;
-    padding: 05px;
-    text-decoration: none;
- 
+    display: flex;
+    padding: 2px;
+    text-decoration: none; 
 }
 .menu a:hover {
     background: white;
