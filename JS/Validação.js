@@ -1,4 +1,4 @@
-function validarSenha() {
+function validarSenhas() {
     senha = document.getElementsByName('senha').value;
     senhaC = document.getElementsByName('senhaC').value;
   
