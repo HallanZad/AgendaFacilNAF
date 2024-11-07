@@ -50,13 +50,15 @@ function getBotResponse(userMessage) {
 }
 
 function validarSenha() {
-    senha = document.getElementsByName('senha').value;
-    senhaC = document.getElementsByName('senhaC').value;
+    let Senha = document.getElementById('Senha');
+    let SenhaC = document.getElementById('SenhaC');
   
-    if (senha != senhaC) {
-      senhaC.setCustomValidity("Senhas diferentes!");
-      return false;
-    } else {
-      return true;
-    }
+    if (Senha.value != SenhaC.value) {
+        SenhaC.setCustomValidity("Senhas diferentes!");
+        SenhaC.reportValidity();
+        return false;
+      } else {
+        SenhaC.setCustomValidity("");
+        return true;
+      }    
   }
