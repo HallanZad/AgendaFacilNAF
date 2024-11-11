@@ -34,9 +34,7 @@
         .B{
             background: whitesmoke;
         }
-        h2{
-            color: #586B6A;
-        }
+
         #mostrar{
   display: none;
 }
@@ -54,24 +52,45 @@
     <div class="site-header">
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div class="menu" id="menu">
-            <a href="Login Cliente.html" class="button">Meus Dados</a>
+            <a href="Dados Cliente.html" class="button">Meu Perfil</a>
             <a href="Agendamento.html" class="button">Agendar</a>
-            <a href="Avaliação.html" class="button">Avaliaçao</a>
+            <a href="Feedback.html" class="button">Avaliaçao</a>
             <a href="Login Cliente.html" class="button">Sair</a>
        </div>
        <img src="IMAGENS/logo001.png" width=320px>
     </div>
             <div class="container">
                 <div class="divbtn">             
-            <p><strong>Bem-vindo, Cliente! </strong></p>
+            <p><strong><h2>Bem-vindo, Cliente! </h2></strong></p>
                 <hr><center>
-                <h2>Proximos atendimentos!</h2>
-                    
-                <br><br>   
-                </div>
+                <div class="container">
+                <div id="passar_mouse"><h3>Sua Proxima Consulta</h3> <div id="mostrar">Esta marcada para dia 15/12/2024 às 10:00 hrs, <br>Lembre-se de chegar com antecedencia e leve os documentos Solicitados!<br> Para Cancelar <a href="Cadastro Cliente.html">Clique aqui!</a></div>  
                 
+            </div>
+                </div>
+                <div class="container">
+                    <p><h2>Historico de Consultas</h2></p>
+                    <table>
+                        <tr class="topo">
+                            <th>Data</th><th>Horario</th><th>Atendente</th><th>Historico</th>
+                        </tr>
+                        <tr class="linha A">
+                           <td>03/10/2024</td> <td>10:00</td><td>Maria</td><td><div id="passar_mouse">Mais<div id="mostrar">Orientação sobre os documentos e o que podemos realizar.</div></td>
+                        </tr>
+                        <tr class="linha B">
+                            <td>20/10/2024</td> <td>11:00</td><td>Luiz</td><td><div id="passar_mouse">Mais<div id="mostrar">Entrega dos documentos e inclusão das informações.</div></td>
+                         </tr>
+                         <tr class="linha A">
+                            <td>05/11/2024</td> <td>12:00</td><td>Vitor</td><td><div id="passar_mouse">Mais<div id="mostrar">Atualização de dados da Receita.</div></td>
+                         </tr>
+                         <tr class="linha B">
+                            <td>22/11/2024</td> <td>13:00</td><td>Vitoria</td><td><div id="passar_mouse">Mais<div id="mostrar">Envio das documentações nescessárias.</div></td>
+                         </tr>
+                    </table></div>
+<br>
             </center>
         </div>
+        
         <div class="site-footer">
             Copyright © 2024.
         </div>

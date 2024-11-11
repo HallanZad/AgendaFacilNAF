@@ -246,3 +246,9 @@ body{
     border-bottom: 0;
     margin-left: -5px;
     margin-bottom: -10px;}
+.cliente01 {
+    border: solid 2px #006b64;
+    width: 30%;
+    margin-right: 20%;
+    border-radius: 10px;
+}

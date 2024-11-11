@@ -32,37 +32,45 @@
 <body>
         <center>
     <div class="site-header">
-            <button class="menu-button" onclick="toggleMenu()">Conta</button>
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
             <div class="menu" id="menu">
-                 <a href="Login Cliente.html" class="button">Sou Cliente</a>
-                 <a href="Login Colaborador.html" class="button">Sou Colaborador</a>
+                <a href="Perfil do Cliente.html" class="button">Pagina Inicial</a>
+                <a href="Dados Cliente.html" class="button">Meu Perfil</a>
+                <a href="Feedback.html" class="button">Avaliaçao</a>
+                <a href="Login Cliente.html" class="button">Sair</a>
             </div>
               <img src="IMAGENS/logo001.png" width=320px>
     </div>
-    <div class="container2">
-        <h2>Agende seu Atendimento</h2>
-        <form action="Perfil do Cliente.html">
-
-            <label for="date">Data:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="time">Hora:</label>
-            <select id="time" name="time" required>
-                <option value="08:00">08:00</option>
-                <option value="09:00">09:00</option>
-                <option value="10:00">10:00</option>
-                <option value="11:00">11:00</option>
-                <option value="12:00">12:00</option>
-                <option value="13:00">13:00</option>
-                <option value="14:00">14:00</option>
-                <option value="15:00">15:00</option>
-                <option value="16:00">16:00</option>
-                <option value="17:00">17:00</option>
-            </select>
-
-            <button class="btn" type="submit">Agendar</button>
-        </form>
-      <br>
-    </div>
+    <div class="container">   
+        <h1><center>AGENDAMENTO</center></h1>
+        <center>
+              <br>
+                    <div class="container2">
+                       <H2>Faça o seu agendamento.</H2> 
+                     <form action="Confirmação de Agendamento.html">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" required>
+                        <label for="horario">Horário:</label>
+                        <select id="horario" name="horario" placeholder="Defina um horário" required>
+                           <option value=""></option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                        </select>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@unifesonaf.com" required>
+                        <button class="btn" type="submit">Agendar</button>
+                    </form><br><br>
+                  </div>
+                    <br>               
+                </center> 
+</div>
 </body>
 </html>
