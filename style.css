@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #a7e1dd;
+    font-size: 20px;
 }
 .container {
     display: block;
@@ -154,101 +155,51 @@ body{
     background: white;
     color: #006b64
 }
-.chatbot-button {
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    background-color: #006b64;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-}
-.chatbot-button:hover{
-    background-color: white;
-    color: #006b64;
-    border: 1px solid #586B6A;
-}
-.chatbot-container {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: white;
-    flex-direction: column;
-}
-.chat-header {
-    background-color: #006b64;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-.chat-content {
-    padding: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-.chat-message {
-    margin-bottom: 20%;
-}
-.options-container {
-    margin-top: 10px;
-}
-.option-button {
-    display: inline;
-    width: 49%;
-    padding: 10px;
-    background-color: #006b64;
-    color: white;
-    border: none;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-.option-button:hover {
-    background-color: white;
-    color: #006b64;
-}
-.chat-message {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    background-color: #e0e0e0;
-    max-width: 80%;
-    word-wrap: break-word;
-}.chat-message {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    background-color: #e0e0e0;
-    max-width: 80%;
-    word-wrap: break-word;
-}
-.chat-message::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: #e0e0e0;
-    border-bottom: 0;
-    margin-left: -5px;
-    margin-bottom: -10px;}
 .cliente01 {
-    border: solid 2px #006b64;
-    width: 30%;
-    margin-right: 20%;
+    border: solid 1px #006b64;
+    width: 15%;
+    margin-right: 2%;
+    border-radius: 10px;
+    float:left;
+    margin-left: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.form1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    label {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+    textarea{
+        width: 60%;
+        height: 100px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+     }
+.Dados-Cliente{
+    display:grid;
+    margin-right: 2%;
+    
+}
+.A1{
+    display: block;
+    background: rgb(237, 237, 237);
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 10px;
+    
+}
+.B1{
+    display:block;
+    background: whitesmoke;
+    padding: 8px;
+    font-size: 20px;
     border-radius: 10px;
 }
