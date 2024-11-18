@@ -203,3 +203,40 @@ body{
     font-size: 20px;
     border-radius: 10px;
 }
+table{
+    border: none;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+}
+.topo{
+    background: #006b64;
+    color: #ffffff;
+}
+.linha{
+    background: #ffffff;
+    color:green
+}
+.linha:hover {
+    background: #006b64;
+    color: white;
+    text-shadow: 5px;
+
+}
+.A{
+    background: white;
+}
+.B{
+    background: whitesmoke;
+}
+
+#mostrar{
+display: none;
+}
+
+#passar_mouse:hover #mostrar{
+display:block;
+}
+.lft{
+left: 10px;
+}    
