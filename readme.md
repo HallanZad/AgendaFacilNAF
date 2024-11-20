@@ -20,7 +20,7 @@ Website que simplifique o agendamento de atendimento da sociedade ao serviço Ag
 
 
 
-Publico alvo
+Público-alvo
     População que precisa de ajuda com  Núcleo de Apoio Contábil e Fiscal (NAF).
     Administração NAF.
 	
