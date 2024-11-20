@@ -26,11 +26,11 @@ NAF controlar a agenda com a capacidade de atendimento.
 
 Possíveis atores envolvidos no projeto são:
 
-Professores e estudantes do Unifeso
+Professores e estudantes do Unifeso.
 Essa é a equipe que vai fazer o atendimento a população.
 
-População
+População.
 Pessoas e empresas que necessitam de ajuda fiscal e contábil do núcleo NAF.
 
-Administração NAF
+Administração NAF.
 Equipe que vai gerir e organizar a agenda de atendimentos.
