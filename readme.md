@@ -1,10 +1,14 @@
-<div style="text-align: center;">
-  <h1>
-	MVP AgendaFácil NAF
-  </h1>
-</div>
+# MVP AgendaFácil NAF - Grupo 25
 
-Alunos:
+## Índice
+- [Alunos](#alunos)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Requisitos Funcionais](#requisitos-funcionais)
+- [Requisitos Não Funcionais](#requisitos-não-funcionais)
+- [Como Instalar e Executar o Projeto](#como-instalar-e-executar-o-projeto)
+
+## Alunos
 - HALLAN DA SILVA CARVALHO
 - PEDRO VINICIOS CORREA DOS SANTOS
 - TIAGO EVARISTO CONDACK	
