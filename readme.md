@@ -2,11 +2,16 @@
 
 ## Índice
 - [Alunos](#alunos)
-- [Funcionalidades](#funcionalidades)
+- [Situação Escolhida](#situação-escolhida)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Requisitos Funcionais](#requisitos-funcionais)
-- [Requisitos Não Funcionais](#requisitos-não-funcionais)
-- [Como Instalar e Executar o Projeto](#como-instalar-e-executar-o-projeto)
+- [Execução do MVP](#execução-do-mvp)
+- [Instruções Adicionais](#instruções-adicionais)
+- [Tipo de MVP](#tipo-de-mvp)
+- [Objetivos](#objetivos)
+- [Benefícios](#benefícios)
+- [Público-alvo](#público-alvo)
+- [Dores do público-alvo](#dores-do-público-alvo)
+- [Os possíveis atores envolvidos](#os-possíveis-atores-envolvidos)
 
 ## Alunos
 - HALLAN DA SILVA CARVALHO
@@ -14,47 +19,50 @@
 - TIAGO EVARISTO CONDACK	
 - WELINGTON CANTO DA SILVA
 
-<h2>Tecnologias envolvidas</h2>
-HTML<br>
-CSS<br>
-JavaScript<br>
+## Situação Escolhida
+Escolhemos a AgendaFácil NAF, para criar um sistema que permita a população local realizar agendamento para atendimento com mais facilidade, para gerenciar os adgendamentos e a distribuição de atendimentos NAF, melhorando e trazendo uma boa experiencia a todos os envolvidos.
 
-<h2>Tipo de MVP</h2>
+## Tecnologias Utilizadas
 
-Mágico de OZ.
+- **HTML**
+- **CSS**
+- **JAVASCRIPT**
 
+## Execução do MVP
+Para executar o MVP temos duas opções:
+- Acesse o site: https://hallanzad.github.io/AgendaFacilNAF/index.html.
+- Faça o download do repositorio e abra a pasta do projeto e clique no arquivo index.html para executar no navegador.
 
-<h3>Objetivos e beneficios:</h3>
+## Instruções Adicionais
+*OBSERVAÇÃO: Para logar nas paginas é so colocar qualquer informação requerida pela pagina que você será redirecionado. Exemplo: E-mail. Qualquer outra opção so colocar qualquer caractere.*
 
-Website que simplifique o agendamento de atendimento da sociedade ao serviço AgendaFácil NAF da Unifeso.<br>
+## Tipo de MVP
+MVP Mágico de Oz
+A interface do aplicativo ou site está pronta, mas as automações são feitas manualmente.
+
+## Objetivos
+Website que simplifique o agendamento de atendimento da sociedade ao serviço AgendaFácil NAF da Unifeso.
 Website que permita a população agendar seus atendimentos no Núcleo de Apoio Contabil e Fiscal de forma eficiente e conveniente.
+
+## Benefícios
 Melhora no atendimento do AgendaFácil devido ao melhor controle de tempo dos atendimentos.
 Melhoria nas escalas de atendimentos por evitar filas e atendimentos fora dos horários disponíveis do corpo do Núcleo de Apoio Contábil e Fiscal.
  
 
-<h3>Público-alvo:
-</h3>
+## Público-alvo
 População local e de municípios vizinhos que precisam de ajuda com Núcleo de Apoio Contábil e Fiscal (NAF) e o próprio NAF.
 
-<h3>Dores do público-alvo
-</h3>
-
-- Necessidade de uma plataforma ágil que faça o agendamento de atendimento do Núcleo de Apoio Contábil e Fiscal.<br>
-- Obter assistência com suas declarações de Imposto de Renda.<br>
-- Obter assistência com as exigências da Receita quando faltam documentação que levem queda em malha fina.<br>
-- Assistência para Recorrer nos processos que estão rolando na Receita.<br>
+## Dores do público-alvo
+- Necessidade de uma plataforma ágil que faça o agendamento de atendimento do Núcleo de Apoio Contábil e Fiscal.
+- Obter assistência com suas declarações de Imposto de Renda.
+- Obter assistência com as exigências da Receita quando faltam documentação que levem queda em malha fina.
+- Assistência para Recorrer nos processos que estão rolando na Receita.
 - Necessidade do Núcleo de Apoio Contabil e Fiscal em melhorar sua agenda de atendimentos, principalmente no a temporada de declaração de imposto de renda.
 
-<h3>Os possíveis atores envolvidos no projeto são:</h3>
-
-Professores e estudantes do Unifeso.
-
-Essa é a equipe que vai fazer o atendimento a população.
-
-População.
-
-Pessoas e empresas que necessitam de ajuda fiscal e contábil do núcleo NAF.
-
-Administração NAF.
-
-Equipe que vai gerir e organizar a agenda de atendimentos.
+## Os possíveis atores envolvidos
+- Professores e estudantes do Unifeso.
+- Essa é a equipe que vai fazer o atendimento a população.
+- População.
+- Pessoas e empresas que necessitam de ajuda fiscal e contábil do núcleo NAF.
+- Administração NAF.
+- Equipe que vai gerir e organizar a agenda de atendimentos.
