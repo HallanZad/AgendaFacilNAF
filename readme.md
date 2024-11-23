@@ -22,9 +22,13 @@ JavaScript<br>
 Mágico de OZ.
 
 
-<h3>Desafio:</h3>
+<h3>Objetivos e beneficios:</h3>
 
-Website que simplifique o agendamento de atendimento da sociedade ao serviço AgendaFácil NAF da Unifeso e que permita a população agendar seus atendimentos no Núcleo de Apoio Contabil e Fiscal de forma eficiente e conveniente.
+Website que simplifique o agendamento de atendimento da sociedade ao serviço AgendaFácil NAF da Unifeso.<br>
+Website que permita a população agendar seus atendimentos no Núcleo de Apoio Contabil e Fiscal de forma eficiente e conveniente.
+Melhora no atendimento do AgendaFácil devido ao melhor controle de tempo dos atendimentos.
+Melhoria nas escalas de atendimentos por evitar filas e atendimentos fora dos horários disponíveis do corpo do Núcleo de Apoio Contábil e Fiscal.
+ 
 
 <h3>Público-alvo:
 </h3>
