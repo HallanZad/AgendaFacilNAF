@@ -6,7 +6,160 @@
     <title>Bem-vindo</title>
     <link rel="icon" type="image/ico" href="IMAGENS/ICON003.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="JS/Index.js" type="text/javascript"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        function mostrarTabelaAdicionar() {
+            document.getElementById("tabelaUsuariosAdicionar").style.display = "block";
+            document.getElementById("tabelaUsuariosEditar").style.display = "none";
+            document.getElementById("tabelaUsuariosExcluir").style.display = "none";
+            verificarTabelaAdicionar();
+        }
+
+        function mostrarTabelaEditar() {
+            document.getElementById("tabelaUsuariosAdicionar").style.display = "none";
+            document.getElementById("tabelaUsuariosEditar").style.display = "block";
+            document.getElementById("tabelaUsuariosExcluir").style.display = "none";
+            verificarTabelaEditar();
+        }
+
+        function mostrarTabelaExcluir() {
+            document.getElementById("tabelaUsuariosAdicionar").style.display = "none";
+            document.getElementById("tabelaUsuariosEditar").style.display = "none";
+            document.getElementById("tabelaUsuariosExcluir").style.display = "block";
+            verificarTabelaExcluir();
+        }
+
+        function adicionarUsuario(button, id, nome, email) {
+            alert('Usuário adicionado com sucesso!');
+            button.style.display = 'none';
+            removerLinhaTabelaAdicionar(id);
+            adicionarLinhaTabelaEditar(id, nome, email);
+            adicionarLinhaTabelaExcluir(id, nome, email);
+        }
+
+        function adicionarLinhaTabelaEditar(id, nome, email) {
+            var tabelaEditar = document.getElementById("tabelaUsuariosEditar").getElementsByTagName('tbody')[0];
+            var novaLinha = tabelaEditar.insertRow();
+            novaLinha.insertCell(0).innerHTML = id;
+            novaLinha.insertCell(1).innerHTML = `<input type='text' value='${nome}'>`;
+            novaLinha.insertCell(2).innerHTML = `<input type='text' value='${email}'>`;
+            novaLinha.insertCell(3).innerHTML = `<button onclick='salvarEdicao(this)'>Salvar</button>`;
+            verificarTabelaEditar();
+        }
+
+        function salvarEdicao(button) {
+            var linha = button.parentElement.parentElement;
+            var nome = linha.cells[1].getElementsByTagName('input')[0].value;
+            var email = linha.cells[2].getElementsByTagName('input')[0].value;
+            alert(`Usuário atualizado com sucesso!\nNome: ${nome}\nEmail: ${email}`);
+        }
+
+        function adicionarLinhaTabelaExcluir(id, nome, email) {
+            var tabelaExcluir = document.getElementById("tabelaUsuariosExcluir").getElementsByTagName('tbody')[0];
+            var novaLinha = tabelaExcluir.insertRow();
+            novaLinha.insertCell(0).innerHTML = id;
+            novaLinha.insertCell(1).innerHTML = nome;
+            novaLinha.insertCell(2).innerHTML = email;
+            novaLinha.insertCell(3).innerHTML = `<button onclick='excluirUsuario(this, ${id}, "${nome}", "${email}")'>Excluir</button>`;
+            verificarTabelaExcluir();
+        }
+
+        function excluirUsuario(button, id, nome, email) {
+            var linha = button.parentElement.parentElement;
+            linha.remove();
+            alert('Usuário excluído com sucesso!');
+            removerLinhaTabelaEditar(id);
+            adicionarLinhaTabelaAdicionar(id, nome, email);
+            verificarTabelaExcluir();
+            verificarTabelaEditar();
+        }
+
+        function removerLinhaTabelaAdicionar(id) {
+            var tabelaAdicionar = document.getElementById("tabelaUsuariosAdicionar").getElementsByTagName('tbody')[0];
+            for (var i = 0; i < tabelaAdicionar.rows.length; i++) {
+                if (tabelaAdicionar.rows[i].cells[0].innerText == id) {
+                    tabelaAdicionar.deleteRow(i);
+                    break;
+                }
+            }
+        }
+
+        function removerLinhaTabelaEditar(id) {
+            var tabelaEditar = document.getElementById("tabelaUsuariosEditar").getElementsByTagName('tbody')[0];
+            for (var i = 0; i < tabelaEditar.rows.length; i++) {
+                if (tabelaEditar.rows[i].cells[0].innerText == id) {
+                    tabelaEditar.deleteRow(i);
+                    break;
+                }
+            }
+        }
+
+        function adicionarLinhaTabelaAdicionar(id, nome, email) {
+            var tabelaAdicionar = document.getElementById("tabelaUsuariosAdicionar").getElementsByTagName('tbody')[0];
+            var novaLinha = tabelaAdicionar.insertRow();
+            novaLinha.insertCell(0).innerHTML = id;
+            novaLinha.insertCell(1).innerHTML = nome;
+            novaLinha.insertCell(2).innerHTML = email;
+            novaLinha.insertCell(3).innerHTML = `<button onclick='adicionarUsuario(this, ${id}, "${nome}", "${email}")'>+</button>`;
+            verificarTabelaAdicionar();
+        }
+
+        function verificarTabelaAdicionar() {
+            var tabelaAdicionar = document.getElementById("tabelaUsuariosAdicionar").getElementsByTagName('tbody')[0];
+            if (tabelaAdicionar.rows.length === 0) {
+                tabelaAdicionar.innerHTML = '<tr><td colspan="4">Não há usuários para adicionar</td></tr>';
+            } else {
+                var primeiraLinha = tabelaAdicionar.rows[0];
+                if (primeiraLinha && primeiraLinha.cells.length === 1 && primeiraLinha.cells[0].colSpan === 4) {
+                    tabelaAdicionar.deleteRow(0);
+                }
+            }
+        }
+
+        function verificarTabelaEditar() {
+            var tabelaEditar = document.getElementById("tabelaUsuariosEditar").getElementsByTagName('tbody')[0];
+            if (tabelaEditar.rows.length === 0) {
+                tabelaEditar.innerHTML = '<tr><td colspan="4">Não há usuários para editar</td></tr>';
+            } else {
+                var primeiraLinha = tabelaEditar.rows[0];
+                if (primeiraLinha && primeiraLinha.cells.length === 1 && primeiraLinha.cells[0].colSpan === 4) {
+                    tabelaEditar.deleteRow(0);
+                }
+            }
+        }
+
+        function verificarTabelaExcluir() {
+            var tabelaExcluir = document.getElementById("tabelaUsuariosExcluir").getElementsByTagName('tbody')[0];
+            if (tabelaExcluir.rows.length === 0) {
+                tabelaExcluir.innerHTML = '<tr><td colspan="4">Não há usuários para excluir</td></tr>';
+            } else {
+                var primeiraLinha = tabelaExcluir.rows[0];
+                if (primeiraLinha && primeiraLinha.cells.length === 1 && primeiraLinha.cells[0].colSpan === 4) {
+                    tabelaExcluir.deleteRow(0);
+                }
+            }
+        }
+
+        window.onload = function() {
+            adicionarLinhaTabelaAdicionar(1023, 'Ana Silva', 'ana.silva@example.com');
+            adicionarLinhaTabelaAdicionar(2045, 'Carlos Oliveira', 'carlos.oliveira@example.com');
+            adicionarLinhaTabelaAdicionar(3067, 'Maria Santos', 'maria.santos@example.com');
+            adicionarLinhaTabelaAdicionar(4089, 'João Pereira', 'joao.pereira@example.com');
+            adicionarLinhaTabelaAdicionar(5101, 'Fernanda Costa', 'fernanda.costa@example.com');
+            adicionarLinhaTabelaAdicionar(6123, 'Ricardo Lima', 'ricardo.lima@example.com');
+            adicionarLinhaTabelaAdicionar(7145, 'Juliana Souza', 'juliana.souza@example.com');
+            adicionarLinhaTabelaAdicionar(8167, 'Rodrigo Almeida', 'rodrigo.almeida@example.com');
+            adicionarLinhaTabelaAdicionar(9189, 'Patrícia Rodrigues', 'patricia.rodrigues@example.com');
+            adicionarLinhaTabelaAdicionar(10211, 'Lucas Fernandes', 'lucas.fernandes@example.com');
+            verificarTabelaAdicionar();
+            verificarTabelaEditar();
+            verificarTabelaExcluir();
+        };
+    </script>
 </head>
 <body>  
     <div class="site-header">
@@ -19,36 +172,73 @@
             <a href="Login Administrador.html" class="button">Sair</a>
        </div>
     </div>
-            <div class="container">
-                <div class="divbtn">             
+    <div class="container">
+        <div class="divbtn">             
             <p><strong>Bem-vindo, Administrador! </strong></p>
-                <hr><center>
+            <hr>
+            <center>
                 <h2>Administrador</h2>
                 <div class="container">
                     <h1>Painel de Administração</h1>
-            
-                    <div class="dashboard">
-                        <h2>Dashboard</h2>
-                        <p>Número de usuários: 100</p>
-                        <p>Agendementos totais: 50</p>
-                    </div>
-            
                     <div class="gerenciar-usuarios">
                         <h2>Gerenciar Usuários</h2>
-                        <button>Adicionar Usuário</button>
-                        <button>Editar Usuários</button>
-                        <button>Excluir Usuários</button>
-                    </div>
-            
+                        <button onclick="mostrarTabelaAdicionar()">Adicionar Usuário</button>
+                        <button onclick="mostrarTabelaEditar()">Editar Usuários</button>
+                        <button onclick="mostrarTabelaExcluir()">Excluir Usuários</button>
+                        <div id="tabelaUsuariosAdicionar" style="display: none; margin-top: 10px;">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Linhas adicionadas dinamicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tabelaUsuariosEditar" style="display: none; margin-top: 10px;">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Linhas adicionadas dinamicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tabelaUsuariosExcluir" style="display: none; margin-top: 10px;">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Linhas adicionadas dinamicamente -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>            
                 <br><br>   
                 </div>  
             </center>
         </div>
-        <br><br>
-        <br><br>
-        <div class="site-footer">
-            Copyright © 2024.
-        </div>
+    </div>
+    <br><br>
+    <div class="site-footer">
+        Copyright © 2024.
+    </div>
 </body>
 </html>
