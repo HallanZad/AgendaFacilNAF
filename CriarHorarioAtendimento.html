@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="icon" type="image/ico" href="IMAGENS/ICON003.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="JS/Index.js" type="text/javascript"></script>
+</head>
+<body>  
+    <div class="site-header">
+        <img src="IMAGENS/logo001.png" width=320px>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="menu" id="menu">
+            <a href="index.html" class="button">Inicio</a>
+            <a href="Login Colaborador.html" class="button">Sair</a>
+       </div>
+    </div>
+            <div class="container">
+                <div class="divbtn">             
+            <p><strong>Bem-vindo, Administrador! </strong></p>
+<div>
+    <form  class="form1" method="post">
+        <label for="Data">Data</label>
+        <input type="date" name="Data" required>
+        <label for="Horario">Hora de Início</label>
+        <input type="time" name="Horario" required>
+        <label for="colaborador">Colaborador do atendimento: </label>
+        <input type="text" name="colaborador" required> 
+        <button class="btn" type="submit">Adicionar agendamento</button>
+    </form>
+<div>
+    <br>
+    <table>
+        <tr class="topo">
+            <th>Data</th>
+            <th>Horario</th>
+            <th>Colaborador</th>
+        </tr>
+        <tr class="linha A">
+            <td>04/12/2024</td><td>10:00</td><td>Maria</td>
+        </tr>
+        <tr class="linha A">
+            <td>04/12/2024</td><td>11:00</td><td>Luiz</td>
+        </tr>
+        <tr class="linha A">
+            <td>04/12/2024</td><td>12:00</td><td>Vitor</td>
+        </tr>
+        <tr class="linha A">
+            <td>04/12/2024</td><td>13:00</td><td>Vitória</td>
+        </tr>
+    </table>
+</div>
+</div>
+        <hr>
+            <center>
+                <h2>Agendamentos realizados</h2>
+                    <table>
+                        <tr class="topo">
+                            <th>Data</th><th>Horario</th><th>Nome</th><th>Visualizar</th>
+                        </tr>
+                        <tr class="linha A">
+                           <td>03/12/2024</td> <td>10:00</td><td>Maria</td><td><div id="passar_mouse">Mais<div id="mostrar">maria@gmail.com</div></td>
+                        </tr>
+                        <tr class="linha B">
+                            <td>03/12/2024</td> <td>11:00</td><td>Luiz</td><td><div id="passar_mouse">Mais<div id="mostrar">luiz@gmail.com</div></td>
+                         </tr>
+                         <tr class="linha A">
+                            <td>03/12/2024</td> <td>12:00</td><td>Vitor</td><td><div id="passar_mouse">Mais<div id="mostrar">vitor@gmail.com</div></td>
+                         </tr>
+                         <tr class="linha B">
+                            <td>03/12/2024</td> <td>13:00</td><td>Vitória</td><td><div id="passar_mouse">Mais<div id="mostrar">Vitoria@gmail.com</div></td>
+                         </tr>
+                    </table>
+                <br><br>   
+                </div>  
+            </center>
+</div>
+        <br><br>
+        <br><br>
+        <div class="site-footer">
+            Copyright © 2024.
+        </div>
+</body>
+</html>
+
