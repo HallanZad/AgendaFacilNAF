@@ -6,6 +6,21 @@
     <title>Bem-vindo</title>
     <link rel="icon" type="image/ico" href="IMAGENS/ICON003.ico">
     <link rel="stylesheet" href="style.css">
+    <style>
+        input{
+            width: 80%;
+        }
+        button{
+            background-color: #006b64;
+            color:white;
+            border-radius: 5px;
+            border: 1px;
+            width: 80%;
+            font-size: 14px;
+            margin-left: 1%;
+            align-items: center;
+        }
+    </style>
     <script>
         function toggleMenu() {
             var menu = document.getElementById("menu");
@@ -46,7 +61,7 @@
             var novaLinha = tabelaEditar.insertRow();
             novaLinha.insertCell(0).innerHTML = id;
             novaLinha.insertCell(1).innerHTML = `<input type='text' value='${nome}'>`;
-            novaLinha.insertCell(2).innerHTML = `<input type='text' value='${email}'>`;
+            novaLinha.insertCell(2).innerHTML = `<input type='email' value='${email}'>`;
             novaLinha.insertCell(3).innerHTML = `<button onclick='salvarEdicao(this)'>Salvar</button>`;
             verificarTabelaEditar();
         }
@@ -145,16 +160,16 @@
         }
 
         window.onload = function() {
-            adicionarLinhaTabelaAdicionar(1023, 'Ana Silva', 'ana.silva@example.com');
-            adicionarLinhaTabelaAdicionar(2045, 'Carlos Oliveira', 'carlos.oliveira@example.com');
-            adicionarLinhaTabelaAdicionar(3067, 'Maria Santos', 'maria.santos@example.com');
-            adicionarLinhaTabelaAdicionar(4089, 'João Pereira', 'joao.pereira@example.com');
-            adicionarLinhaTabelaAdicionar(5101, 'Fernanda Costa', 'fernanda.costa@example.com');
-            adicionarLinhaTabelaAdicionar(6123, 'Ricardo Lima', 'ricardo.lima@example.com');
-            adicionarLinhaTabelaAdicionar(7145, 'Juliana Souza', 'juliana.souza@example.com');
-            adicionarLinhaTabelaAdicionar(8167, 'Rodrigo Almeida', 'rodrigo.almeida@example.com');
-            adicionarLinhaTabelaAdicionar(9189, 'Patrícia Rodrigues', 'patricia.rodrigues@example.com');
-            adicionarLinhaTabelaAdicionar(10211, 'Lucas Fernandes', 'lucas.fernandes@example.com');
+            adicionarLinhaTabelaAdicionar(1023, 'Ana S.', 'ana.s@naf.com');
+            adicionarLinhaTabelaAdicionar(2045, 'Carlos O.', 'carlos.o@naf.com');
+            adicionarLinhaTabelaAdicionar(3067, 'Maria S.', 'maria.s@naf.com');
+            adicionarLinhaTabelaAdicionar(4089, 'João P.', 'joao.p@naf.com');
+            adicionarLinhaTabelaAdicionar(5101, 'vitor C.', 'Vitor.c@naf.com');
+            adicionarLinhaTabelaAdicionar(6123, 'Ricardo L.', 'ricardo.l@naf.com');
+            adicionarLinhaTabelaAdicionar(7145, 'Juliana S.', 'juliana.s@naf.com');
+            adicionarLinhaTabelaAdicionar(8167, 'Rodrigo A.', 'rodrigo.a@naf.com');
+            adicionarLinhaTabelaAdicionar(9189, 'Patrícia R.', 'patricia.r@naf.com');
+            adicionarLinhaTabelaAdicionar(10211, 'Lucas F.', 'lucas.f@naf.com');
             verificarTabelaAdicionar();
             verificarTabelaEditar();
             verificarTabelaExcluir();
@@ -177,18 +192,16 @@
             <p><strong>Bem-vindo, Administrador! </strong></p>
             <hr>
             <center>
-                <h2>Administrador</h2>
-                <div class="container">
                     <h1>Painel de Administração</h1>
                     <div class="gerenciar-usuarios">
                         <h2>Gerenciar Usuários</h2>
-                        <button onclick="mostrarTabelaAdicionar()">Adicionar Usuário</button>
-                        <button onclick="mostrarTabelaEditar()">Editar Usuários</button>
-                        <button onclick="mostrarTabelaExcluir()">Excluir Usuários</button>
+                        <button class="btn" onclick="mostrarTabelaAdicionar()">Adicionar Usuário</button>
+                        <button class="btn" onclick="mostrarTabelaEditar()">Editar Usuários</button>
+                        <button class="btn" onclick="mostrarTabelaExcluir()">Excluir Usuários</button>
                         <div id="tabelaUsuariosAdicionar" style="display: none; margin-top: 10px;">
-                            <table border="1">
+                            <table class="os-datatable" border="1">
                                 <thead>
-                                    <tr>
+                                    <tr class="topo">
                                         <th>ID</th>
                                         <th>Nome</th>
                                         <th>Email</th>
@@ -198,12 +211,12 @@
                                 <tbody>
                                     <!-- Linhas adicionadas dinamicamente -->
                                 </tbody>
-                            </table>
+                            </table><br><br>
                         </div>
-                        <div id="tabelaUsuariosEditar" style="display: none; margin-top: 10px;">
+                        <div id="tabelaUsuariosEditar" width="50" style="display: none; margin-top: 10px;">
                             <table border="1">
                                 <thead>
-                                    <tr>
+                                    <tr class="topo">
                                         <th>ID</th>
                                         <th>Nome</th>
                                         <th>Email</th>
@@ -218,7 +231,7 @@
                         <div id="tabelaUsuariosExcluir" style="display: none; margin-top: 10px;">
                             <table border="1">
                                 <thead>
-                                    <tr>
+                                    <tr class="topo">
                                         <th>ID</th>
                                         <th>Nome</th>
                                         <th>Email</th>
@@ -234,7 +247,7 @@
                 <br><br>   
                 </div>  
             </center>
-        </div>
+        </div> <br><br>  
     </div>
     <br><br>
     <div class="site-footer">

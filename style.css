@@ -240,3 +240,7 @@ display:block;
 .lft{
 left: 10px;
 }    
+.os-datatable{
+    display: table;
+    margin-bottom: 0;
+}
