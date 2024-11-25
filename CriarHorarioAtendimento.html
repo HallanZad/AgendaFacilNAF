@@ -22,25 +22,13 @@
             <div class="container">
                 <div class="divbtn">             
             <p><strong>Bem-vindo, Administrador! </strong></p>
-            <hr><center>
-            <h1>Disponibilidade de Horário.</h1>
-<div class="container2">
-    <form  class="form2" metho="post" action="Adicionar agendamento.html" onsubmit="('Horário adicionado com sucesso!')">
-        <label for="Data:">Data</label>
+<div>
+    <form  class="form1" method="post">
+        <label for="Data">Data</label>
         <input type="date" name="Data" required>
-        <label for="Horario:">Hora de Início</label>
-        <select id="horario" name="horario" placeholder="Defina um horário" required>
-            <option value=""></option>
-             <option value="09:00">09:00</option>
-             <option value="10:00">10:00</option>
-             <option value="11:00">11:00</option>
-             <option value="12:00">12:00</option>
-             <option value="13:00">13:00</option>
-             <option value="14:00">14:00</option>
-             <option value="15:00">15:00</option>
-             <option value="16:00">16:00</option>
-         </select>
-        <label for="colaborador:">Colaborador do atendimento: </label>
+        <label for="Horario">Hora de Início</label>
+        <input type="time" name="Horario" required>
+        <label for="colaborador">Colaborador do atendimento: </label>
         <input type="text" name="colaborador" required> 
         <button class="btn" type="submit">Adicionar agendamento</button>
     </form></div>
