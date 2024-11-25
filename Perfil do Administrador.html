@@ -6,175 +6,7 @@
     <title>Bem-vindo</title>
     <link rel="icon" type="image/ico" href="IMAGENS/ICON003.ico">
     <link rel="stylesheet" href="style.css">
-    <style>
-        input{
-            width: 80%;
-        }
-        button{
-            background-color: #006b64;
-            color:white;
-            border-radius: 5px;
-            border: 1px;
-            width: 80%;
-            font-size: 14px;
-            margin-left: 1%;
-            align-items: center;
-        }
-    </style>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
-        }
-
-        function mostrarTabelaAdicionar() {
-            document.getElementById("tabelaUsuariosAdicionar").style.display = "block";
-            document.getElementById("tabelaUsuariosEditar").style.display = "none";
-            document.getElementById("tabelaUsuariosExcluir").style.display = "none";
-            verificarTabelaAdicionar();
-        }
-
-        function mostrarTabelaEditar() {
-            document.getElementById("tabelaUsuariosAdicionar").style.display = "none";
-            document.getElementById("tabelaUsuariosEditar").style.display = "block";
-            document.getElementById("tabelaUsuariosExcluir").style.display = "none";
-            verificarTabelaEditar();
-        }
-
-        function mostrarTabelaExcluir() {
-            document.getElementById("tabelaUsuariosAdicionar").style.display = "none";
-            document.getElementById("tabelaUsuariosEditar").style.display = "none";
-            document.getElementById("tabelaUsuariosExcluir").style.display = "block";
-            verificarTabelaExcluir();
-        }
-
-        function adicionarUsuario(button, id, nome, email) {
-            alert('Usuário adicionado com sucesso!');
-            button.style.display = 'none';
-            removerLinhaTabelaAdicionar(id);
-            adicionarLinhaTabelaEditar(id, nome, email);
-            adicionarLinhaTabelaExcluir(id, nome, email);
-        }
-
-        function adicionarLinhaTabelaEditar(id, nome, email) {
-            var tabelaEditar = document.getElementById("tabelaUsuariosEditar").getElementsByTagName('tbody')[0];
-            var novaLinha = tabelaEditar.insertRow();
-            novaLinha.insertCell(0).innerHTML = id;
-            novaLinha.insertCell(1).innerHTML = `<input type='text' value='${nome}'>`;
-            novaLinha.insertCell(2).innerHTML = `<input type='email' value='${email}'>`;
-            novaLinha.insertCell(3).innerHTML = `<button onclick='salvarEdicao(this)'>Salvar</button>`;
-            verificarTabelaEditar();
-        }
-
-        function salvarEdicao(button) {
-            var linha = button.parentElement.parentElement;
-            var nome = linha.cells[1].getElementsByTagName('input')[0].value;
-            var email = linha.cells[2].getElementsByTagName('input')[0].value;
-            alert(`Usuário atualizado com sucesso!\nNome: ${nome}\nEmail: ${email}`);
-        }
-
-        function adicionarLinhaTabelaExcluir(id, nome, email) {
-            var tabelaExcluir = document.getElementById("tabelaUsuariosExcluir").getElementsByTagName('tbody')[0];
-            var novaLinha = tabelaExcluir.insertRow();
-            novaLinha.insertCell(0).innerHTML = id;
-            novaLinha.insertCell(1).innerHTML = nome;
-            novaLinha.insertCell(2).innerHTML = email;
-            novaLinha.insertCell(3).innerHTML = `<button onclick='excluirUsuario(this, ${id}, "${nome}", "${email}")'>Excluir</button>`;
-            verificarTabelaExcluir();
-        }
-
-        function excluirUsuario(button, id, nome, email) {
-            var linha = button.parentElement.parentElement;
-            linha.remove();
-            alert('Usuário excluído com sucesso!');
-            removerLinhaTabelaEditar(id);
-            adicionarLinhaTabelaAdicionar(id, nome, email);
-            verificarTabelaExcluir();
-            verificarTabelaEditar();
-        }
-
-        function removerLinhaTabelaAdicionar(id) {
-            var tabelaAdicionar = document.getElementById("tabelaUsuariosAdicionar").getElementsByTagName('tbody')[0];
-            for (var i = 0; i < tabelaAdicionar.rows.length; i++) {
-                if (tabelaAdicionar.rows[i].cells[0].innerText == id) {
-                    tabelaAdicionar.deleteRow(i);
-                    break;
-                }
-            }
-        }
-
-        function removerLinhaTabelaEditar(id) {
-            var tabelaEditar = document.getElementById("tabelaUsuariosEditar").getElementsByTagName('tbody')[0];
-            for (var i = 0; i < tabelaEditar.rows.length; i++) {
-                if (tabelaEditar.rows[i].cells[0].innerText == id) {
-                    tabelaEditar.deleteRow(i);
-                    break;
-                }
-            }
-        }
-
-        function adicionarLinhaTabelaAdicionar(id, nome, email) {
-            var tabelaAdicionar = document.getElementById("tabelaUsuariosAdicionar").getElementsByTagName('tbody')[0];
-            var novaLinha = tabelaAdicionar.insertRow();
-            novaLinha.insertCell(0).innerHTML = id;
-            novaLinha.insertCell(1).innerHTML = nome;
-            novaLinha.insertCell(2).innerHTML = email;
-            novaLinha.insertCell(3).innerHTML = `<button onclick='adicionarUsuario(this, ${id}, "${nome}", "${email}")'>+</button>`;
-            verificarTabelaAdicionar();
-        }
-
-        function verificarTabelaAdicionar() {
-            var tabelaAdicionar = document.getElementById("tabelaUsuariosAdicionar").getElementsByTagName('tbody')[0];
-            if (tabelaAdicionar.rows.length === 0) {
-                tabelaAdicionar.innerHTML = '<tr><td colspan="4">Não há usuários para adicionar</td></tr>';
-            } else {
-                var primeiraLinha = tabelaAdicionar.rows[0];
-                if (primeiraLinha && primeiraLinha.cells.length === 1 && primeiraLinha.cells[0].colSpan === 4) {
-                    tabelaAdicionar.deleteRow(0);
-                }
-            }
-        }
-
-        function verificarTabelaEditar() {
-            var tabelaEditar = document.getElementById("tabelaUsuariosEditar").getElementsByTagName('tbody')[0];
-            if (tabelaEditar.rows.length === 0) {
-                tabelaEditar.innerHTML = '<tr><td colspan="4">Não há usuários para editar</td></tr>';
-            } else {
-                var primeiraLinha = tabelaEditar.rows[0];
-                if (primeiraLinha && primeiraLinha.cells.length === 1 && primeiraLinha.cells[0].colSpan === 4) {
-                    tabelaEditar.deleteRow(0);
-                }
-            }
-        }
-
-        function verificarTabelaExcluir() {
-            var tabelaExcluir = document.getElementById("tabelaUsuariosExcluir").getElementsByTagName('tbody')[0];
-            if (tabelaExcluir.rows.length === 0) {
-                tabelaExcluir.innerHTML = '<tr><td colspan="4">Não há usuários para excluir</td></tr>';
-            } else {
-                var primeiraLinha = tabelaExcluir.rows[0];
-                if (primeiraLinha && primeiraLinha.cells.length === 1 && primeiraLinha.cells[0].colSpan === 4) {
-                    tabelaExcluir.deleteRow(0);
-                }
-            }
-        }
-
-        window.onload = function() {
-            adicionarLinhaTabelaAdicionar(1023, 'Ana S.', 'ana.s@naf.com');
-            adicionarLinhaTabelaAdicionar(2045, 'Carlos O.', 'carlos.o@naf.com');
-            adicionarLinhaTabelaAdicionar(3067, 'Maria S.', 'maria.s@naf.com');
-            adicionarLinhaTabelaAdicionar(4089, 'João P.', 'joao.p@naf.com');
-            adicionarLinhaTabelaAdicionar(5101, 'vitor C.', 'Vitor.c@naf.com');
-            adicionarLinhaTabelaAdicionar(6123, 'Ricardo L.', 'ricardo.l@naf.com');
-            adicionarLinhaTabelaAdicionar(7145, 'Juliana S.', 'juliana.s@naf.com');
-            adicionarLinhaTabelaAdicionar(8167, 'Rodrigo A.', 'rodrigo.a@naf.com');
-            adicionarLinhaTabelaAdicionar(9189, 'Patrícia R.', 'patricia.r@naf.com');
-            adicionarLinhaTabelaAdicionar(10211, 'Lucas F.', 'lucas.f@naf.com');
-            verificarTabelaAdicionar();
-            verificarTabelaEditar();
-            verificarTabelaExcluir();
-        };
-    </script>
+    <script src="JS/Index.js" type="text/javascript"></script>
 </head>
 <body>  
     <div class="site-header">
@@ -182,8 +14,8 @@
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div class="menu" id="menu">
             <a href="CriarHorarioAtendimento.html" class="button">Criar Horários</a>
-            <a href="" class="button">!!</a>
-            <a href="" class="button">!!</a>
+            <a href="Gerenciar Usuarios.html" class="button">Gerenciar Usuários</a>
+            <a href="Visualização Feedbak.html" class="button">Feedbacks Recebidos</a>
             <a href="Login Administrador.html" class="button">Sair</a>
        </div>
     </div>
@@ -192,63 +24,42 @@
             <p><strong>Bem-vindo, Administrador! </strong></p>
             <hr>
             <center>
-                    <h1>Painel de Administração</h1>
-                    <div class="gerenciar-usuarios">
-                        <h2>Gerenciar Usuários</h2>
-                        <button class="btn" onclick="mostrarTabelaAdicionar()">Adicionar Usuário</button>
-                        <button class="btn" onclick="mostrarTabelaEditar()">Editar Usuários</button>
-                        <button class="btn" onclick="mostrarTabelaExcluir()">Excluir Usuários</button>
-                        <div id="tabelaUsuariosAdicionar" style="display: none; margin-top: 10px;">
-                            <table class="os-datatable" border="1">
-                                <thead>
-                                    <tr class="topo">
-                                        <th>ID</th>
-                                        <th>Nome</th>
-                                        <th>Email</th>
-                                        <th>Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Linhas adicionadas dinamicamente -->
-                                </tbody>
-                            </table><br><br>
-                        </div>
-                        <div id="tabelaUsuariosEditar" width="50" style="display: none; margin-top: 10px;">
-                            <table border="1">
-                                <thead>
-                                    <tr class="topo">
-                                        <th>ID</th>
-                                        <th>Nome</th>
-                                        <th>Email</th>
-                                        <th>Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Linhas adicionadas dinamicamente -->
-                                </tbody>
-                            </table>
-                        </div>
-                        <div id="tabelaUsuariosExcluir" style="display: none; margin-top: 10px;">
-                            <table border="1">
-                                <thead>
-                                    <tr class="topo">
-                                        <th>ID</th>
-                                        <th>Nome</th>
-                                        <th>Email</th>
-                                        <th>Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Linhas adicionadas dinamicamente -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>            
-                <br><br>   
-                </div>  
-            </center>
+            <h2>Status dos atendimentos</h2>
+                    <table>
+                        <tr class="topo">
+                            <th>Data</th><th>Agendado</th><th>Atendido</th><th>Ausencias</th>
+                        </tr>
+                        <tr class="linha A">
+                           <td>03/12</td> <td>10</td><td>8</td><td>2</td>
+                        </tr>
+                        <tr class="linha B">
+                            <td>04/12</td> <td>15</td><td>15</td><td>0</td>
+                         </tr>
+                         <tr class="linha A">
+                            <td>05/12</td> <td>18</td><td>17</td><td>1</td>
+                         </tr>
+                         <tr class="linha B">
+                             <td>06/12</td> <td>12</td><td>12</td><td>0</td>
+                          </tr><tr class="linha A">
+                            <td>07/12</td> <td>Não haverá atendimentos</td>
+                         </tr>
+                         <tr class="linha B">
+                             <td>08/12</td> <td>Não haverá atendimentos</td>
+                          </tr><tr class="linha A">
+                            <td>09/12</td> <td>6</td><td>4</td><td>2</td>
+                         </tr>
+                         <tr class="linha B">
+                             <td>10/12</td> <td>11</td><td>10</td><td>1</td>
+                          </tr><tr class="linha A">
+                            <td>11/12</td> <td>19</td><td>19</td><td>0</td>
+                         </tr>
+                         <tr class="linha B">
+                             <td>12/12</td> <td>17</td><td>17</td><td>0</td>
+                          </tr>
+                         
+                    </table>
         </div> <br><br>  
-    </div>
+    </div></center>
     <br><br>
     <div class="site-footer">
         Copyright © 2024.

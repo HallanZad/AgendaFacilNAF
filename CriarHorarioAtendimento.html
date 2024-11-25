@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo</title>
+    <title>Horários</title>
     <link rel="icon" type="image/ico" href="IMAGENS/ICON003.ico">
     <link rel="stylesheet" href="style.css">
     <script src="JS/Index.js" type="text/javascript"></script>
@@ -13,23 +13,37 @@
         <img src="IMAGENS/logo001.png" width=320px>
         <button class="menu-button" onclick="toggleMenu()">Menu</button>
         <div class="menu" id="menu">
-            <a href="index.html" class="button">Inicio</a>
-            <a href="Login Colaborador.html" class="button">Sair</a>
+            <a href="Perfil do Administrador.html" class="button">Pagina Inicial</a>
+            <a href="Gerenciar Usuarios.html" class="button">Gerenciar Usuários</a>
+            <a href="Visualização Feedbak.html" class="button">Feddback Recebidos</a>
+            <a href="Login Administrador.html" class="button">Sair</a>
        </div>
     </div>
             <div class="container">
                 <div class="divbtn">             
             <p><strong>Bem-vindo, Administrador! </strong></p>
-<div>
-    <form  class="form1" method="post">
-        <label for="Data">Data</label>
+            <hr><center>
+            <h1>Disponibilidade de Horário.</h1>
+<div class="container2">
+    <form  class="form2" metho="post" action="Adicionar agendamento.html" onsubmit="('Horário adicionado com sucesso!')">
+        <label for="Data:">Data</label>
         <input type="date" name="Data" required>
-        <label for="Horario">Hora de Início</label>
-        <input type="time" name="Horario" required>
-        <label for="colaborador">Colaborador do atendimento: </label>
+        <label for="Horario:">Hora de Início</label>
+        <select id="horario" name="horario" placeholder="Defina um horário" required>
+            <option value=""></option>
+             <option value="09:00">09:00</option>
+             <option value="10:00">10:00</option>
+             <option value="11:00">11:00</option>
+             <option value="12:00">12:00</option>
+             <option value="13:00">13:00</option>
+             <option value="14:00">14:00</option>
+             <option value="15:00">15:00</option>
+             <option value="16:00">16:00</option>
+         </select>
+        <label for="colaborador:">Colaborador do atendimento: </label>
         <input type="text" name="colaborador" required> 
         <button class="btn" type="submit">Adicionar agendamento</button>
-    </form>
+    </form></div>
 <div>
     <br>
     <table>
@@ -41,41 +55,22 @@
         <tr class="linha A">
             <td>04/12/2024</td><td>10:00</td><td>Maria</td>
         </tr>
-        <tr class="linha A">
+        <tr class="linha B">
             <td>04/12/2024</td><td>11:00</td><td>Luiz</td>
         </tr>
         <tr class="linha A">
             <td>04/12/2024</td><td>12:00</td><td>Vitor</td>
         </tr>
-        <tr class="linha A">
+        <tr class="linha B">
             <td>04/12/2024</td><td>13:00</td><td>Vitória</td>
         </tr>
     </table>
+</div></center>
 </div>
-</div>
-        <hr>
-            <center>
-                <h2>Agendamentos realizados</h2>
-                    <table>
-                        <tr class="topo">
-                            <th>Data</th><th>Horario</th><th>Nome</th><th>Visualizar</th>
-                        </tr>
-                        <tr class="linha A">
-                           <td>03/12/2024</td> <td>10:00</td><td>Maria</td><td><div id="passar_mouse">Mais<div id="mostrar">maria@gmail.com</div></td>
-                        </tr>
-                        <tr class="linha B">
-                            <td>03/12/2024</td> <td>11:00</td><td>Luiz</td><td><div id="passar_mouse">Mais<div id="mostrar">luiz@gmail.com</div></td>
-                         </tr>
-                         <tr class="linha A">
-                            <td>03/12/2024</td> <td>12:00</td><td>Vitor</td><td><div id="passar_mouse">Mais<div id="mostrar">vitor@gmail.com</div></td>
-                         </tr>
-                         <tr class="linha B">
-                            <td>03/12/2024</td> <td>13:00</td><td>Vitória</td><td><div id="passar_mouse">Mais<div id="mostrar">Vitoria@gmail.com</div></td>
-                         </tr>
-                    </table>
-                <br><br>   
-                </div>  
-            </center>
+        
+            
+                
+              
 </div>
         <br><br>
         <br><br>
